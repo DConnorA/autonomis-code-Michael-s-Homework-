@@ -1,28 +1,14 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+#include <WPILib.h>
+#include <math.h>
 
-# Precompiled Headers
-*.gch
-*.pch
+#define DRIVE_ENCODER_TO_FEET 0.00434782608695652173913043478261
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+class MainRobot : public SimpleRobot
+{
+  Talon *motorLeft *motorRight;
+Public:
+  MainRobot(void) {
+    //setting up motors
+    motorLeft = new Talon(1)
+    motorRight = new Talon(2)
+    void Autonomous {
