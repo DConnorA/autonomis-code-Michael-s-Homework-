@@ -34,7 +34,8 @@ Public:
     void Autonomous ()
     {
     
-    //Autonomous to run the yellow tote into auto zone and nothing else
+    //Autonomous will pick up the tote and bring it into auto zone and nothing else
+    //loading the tote
     motorLoaderLeft->set(-.5);
     motorLoaderRight->set(.5);
     
@@ -45,6 +46,7 @@ Public:
     motorLoaderLeft->set(0.0);
     motorLoaderRight->set(0.0);
     
+    //runing it into auto zone
     motorLeft->set(1.0);
     motorRight->set(-1.0);
     
